@@ -20,9 +20,14 @@ const Countrypage = () => {
 
 	return (
 		<div className="country-page">
-			<button onClick={() => navigate(-1)}>Back</button>
-			<button onClick={() => navigate("/")}>Home</button>
-			{/* <h1>⬅️</h1> */}
+			<div className="navigation-buttons">
+				<button className="back-button" onClick={() => navigate(-1)}>
+					← Back
+				</button>
+				<button className="home-button" onClick={() => navigate("/")}>
+					🏠 Home
+				</button>
+			</div>
 			{flag &&
 				flag
 					.filter((item) => item.name?.common === name)
